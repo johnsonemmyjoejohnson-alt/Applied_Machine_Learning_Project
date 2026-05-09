@@ -40,7 +40,7 @@ def select_device(requested: str) -> torch.device:
 def preprocess_map(input_map: np.ndarray, image_size: int, stats: NormalizationStats) -> np.ndarray:
     if input_map.ndim == 3:
         input_map = input_map[0]
-    if input_map.ndim != 2:
+    if input_map.ndim != 4:
         raise ValueError(f"Expected a 2D map or a stack of maps, received shape {input_map.shape}")
 
     input_map = np.log10(input_map.astype(np.float32) + 1.0)
