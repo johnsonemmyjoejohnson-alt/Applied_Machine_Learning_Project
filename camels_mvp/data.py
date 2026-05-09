@@ -8,7 +8,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 
-MAPS_PER_SIMULATION = 15
+MAPS_PER_SIMULATION = 16
 SUPPORTED_SETS = ("CV", "EX")
 
 
